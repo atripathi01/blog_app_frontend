@@ -69,14 +69,14 @@ const QuillEditor = () => {
           </Grid>
           <Grid item lg={9} xs={12}>
             <Typography>Write Blog Content:</Typography>
-            <ReactQuill
+            {/* <ReactQuill
               theme='snow'
               value={content||''}
               onChange={handleChange}
               modules={modules}
               formats={formats}
               style={{height:'70vh'}}
-            />
+            /> */}
           </Grid>
         </Grid>
         <Box sx={{textAlign:'end',mb:5}}>
