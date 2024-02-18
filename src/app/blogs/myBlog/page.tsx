@@ -7,6 +7,7 @@ import Link from '@mui/material/Link';
 import HomeIcon from '@mui/icons-material/Home';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
+import axios from 'axios';
 
 const MyBlogs = () => {
 
@@ -41,6 +42,15 @@ const MyBlogs = () => {
             content:"<h1>fourth blog content</h1>"
         },
     ]
+
+    const fetchUserBlogs= () =>{
+        
+        axios.get(`${process.env.NEXT_APP_API_URL}/user-blogs/65c675ff0a4758de7560d11f`).then((res)=>{
+            console.log(res);
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
   return (
     <>
    <Head>
